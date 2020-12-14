@@ -1,4 +1,3 @@
-import './styles/reset.scss';
-import './styles/style.scss';
+import * as home from './home/home';
 
-console.log('Webpack testing ');
+home.homeEnter(document.querySelector('.wrapper'));
