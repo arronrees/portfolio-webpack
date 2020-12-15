@@ -10,7 +10,6 @@ module.exports = merge(common, {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    publicPath: 'dist',
     port: 9000,
   },
 });
