@@ -1,12 +1,12 @@
-export function openCard(container) {
-  const cardBtn1 = container.querySelector('.open1');
-  const cardBtn2 = container.querySelector('.open2');
-  const cardBtn3 = container.querySelector('.open3');
-  const cardBtn4 = container.querySelector('.open4');
-  const cardText1 = container.querySelector('.card-text1');
-  const cardText2 = container.querySelector('.card-text2');
-  const cardText3 = container.querySelector('.card-text3');
-  const cardText4 = container.querySelector('.card-text4');
+export function openCard() {
+  const cardBtn1 = document.querySelector('.open1');
+  const cardBtn2 = document.querySelector('.open2');
+  const cardBtn3 = document.querySelector('.open3');
+  const cardBtn4 = document.querySelector('.open4');
+  const cardText1 = document.querySelector('.card-text1');
+  const cardText2 = document.querySelector('.card-text2');
+  const cardText3 = document.querySelector('.card-text3');
+  const cardText4 = document.querySelector('.card-text4');
 
   cardBtn1.addEventListener('click', () => {
     cardBtn1.classList.toggle('open-rotate');

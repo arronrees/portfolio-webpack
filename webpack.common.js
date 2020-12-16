@@ -7,16 +7,18 @@ module.exports = {
   entry: {
     main: './src/js/index.js',
     home: './src/js/pages/home.js',
+    work: './src/js/pages/work.js',
   },
   plugins: [
     new HtmlWebpackSkipAssetsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/templates/indexTemplate.html',
+      excludeAssets: [/work.*.js/],
     }),
     new HtmlWebpackPlugin({
       filename: 'work.html',
       template: './src/templates/workTemplate.html',
-      // excludeAssets: [/main.*.js/],
+      excludeAssets: [/home.*.js/],
     }),
     new HtmlWebpackPlugin({
       filename: 'about.html',
@@ -39,7 +41,7 @@ module.exports = {
         use: ['html-loader'],
       },
       {
-        test: /\.(svg|png|jps|gif)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         use: {
           loader: 'file-loader',
           options: {

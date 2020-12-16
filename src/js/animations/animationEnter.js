@@ -2,7 +2,7 @@ import gsap from 'gsap';
 
 export function animationEnter(container) {
   const pageCards = document.querySelectorAll('.page-card');
-  const hero = container.querySelector('.hero');
+  const hero = container.querySelector('.page-hero');
   const navLinks = container.querySelectorAll('.nav-item');
 
   const tl = gsap.timeline({
@@ -19,9 +19,9 @@ export function animationEnter(container) {
     0.2
   )
     .to(container, { opacity: 1 })
-    .from(hero, { y: -25, opacity: 0 }, 0)
-    .from(navLinks[0], { x: -25, opacity: 0 }, 1.5)
-    .from([navLinks[1], navLinks[2]], { x: 25, opacity: 0 }, 1.5);
+    .from(hero, { y: -25, opacity: 0 }, '-=1')
+    .from(navLinks[0], { x: -25, opacity: 0 }, '-=0.5')
+    .from([navLinks[1], navLinks[2]], { x: 25, opacity: 0 }, '-=1');
 
   return tl;
 }

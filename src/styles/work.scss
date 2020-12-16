@@ -1,0 +1,162 @@
+.projects {
+  align-items: center;
+}
+
+.cards {
+  width: 70vw;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 450px;
+  gap: 4rem;
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: teal;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(101%);
+  width: 80%;
+  height: 100%;
+  background-color: rgb(36, 43, 49);
+  padding: 2rem;
+  transition: 1s ease;
+
+  font-family: 'Antic Slab', serif;
+  letter-spacing: 0.05rem;
+  line-height: 1.25;
+}
+
+.card-text h4 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.card-text p {
+  padding-bottom: 1rem;
+}
+
+.card-text i {
+  padding: 1rem 1rem 0 0;
+}
+
+.open {
+  background-color: white;
+  color: rgb(36, 43, 49);
+  width: 3rem;
+  height: 3em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+
+.open-rotate {
+  transform: rotate(180deg);
+  transition: transform 500ms;
+}
+
+.card-open {
+  transform: translateX(0);
+}
+
+.arrows,
+.prev,
+.next {
+  opacity: 0;
+  display: none;
+}
+
+@media only screen and (min-width: 500px) {
+  .card-text h4 {
+    font-size: 2rem;
+  }
+
+  .card-text i,
+  .card-text p {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .cards {
+    width: 60vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 550px;
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 60vh;
+  }
+
+  .arrows,
+  .prev,
+  .next {
+    opacity: 1;
+    display: block;
+  }
+
+  .arrows {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+  }
+
+  .next,
+  .prev {
+    cursor: pointer;
+    position: absolute;
+    transition: 200ms;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .next {
+    right: 8rem;
+  }
+
+  .prev {
+    left: 8rem;
+  }
+
+  .next:hover,
+  .prev:hover {
+    transform: translateY(-50%) scale(1.5);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-text h4 {
+    font-size: 2.5rem;
+  }
+
+  .card-text i,
+  .card-text p {
+    font-size: 1.5rem;
+  }
+}
