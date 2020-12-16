@@ -6,7 +6,7 @@ const HtmlWebpackSkipAssetsPlugin = require('html-webpack-skip-assets-plugin')
 module.exports = {
   entry: {
     main: './src/js/index.js',
-    vendor: './src/js/vendor.js',
+    home: './src/js/vendor.js',
   },
   plugins: [
     new HtmlWebpackSkipAssetsPlugin(),
@@ -16,7 +16,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'work.html',
       template: './src/templates/workTemplate.html',
-      excludeAssets: [/main.*.js/],
+      // excludeAssets: [/main.*.js/],
     }),
     new HtmlWebpackPlugin({
       filename: 'about.html',
