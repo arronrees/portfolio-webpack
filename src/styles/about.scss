@@ -11,14 +11,14 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-}
 
-.about-desc p {
-  font-family: 'Antic Slab', serif;
-  line-height: 1.5;
-  letter-spacing: 0.1rem;
-  font-size: 1rem;
-  padding: 4rem 0;
+  p {
+    font-family: 'Antic Slab', serif;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 4rem 0;
+  }
 }
 
 .skills {
@@ -30,9 +30,11 @@
 }
 
 @media only screen and (min-width: 900px) {
-  .about-desc p {
-    padding: 4rem 0;
-    font-size: 1.5rem;
+  .about-desc {
+    p {
+      padding: 4rem 0;
+      font-size: 1.5rem;
+    }
   }
 
   .skills {

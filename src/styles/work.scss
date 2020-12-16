@@ -16,13 +16,13 @@
   border-radius: 5px;
   overflow: hidden;
   background-color: teal;
-}
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .card-text {
@@ -39,19 +39,19 @@
   font-family: 'Antic Slab', serif;
   letter-spacing: 0.05rem;
   line-height: 1.25;
-}
 
-.card-text h4 {
-  font-size: 1.5rem;
-  padding-bottom: 1rem;
-}
+  h4 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
 
-.card-text p {
-  padding-bottom: 1rem;
-}
+  p {
+    padding-bottom: 1rem;
+  }
 
-.card-text i {
-  padding: 1rem 1rem 0 0;
+  i {
+    padding: 1rem 1rem 0 0;
+  }
 }
 
 .open {
@@ -87,13 +87,14 @@
 }
 
 @media only screen and (min-width: 500px) {
-  .card-text h4 {
-    font-size: 2rem;
-  }
-
-  .card-text i,
-  .card-text p {
-    font-size: 1.25rem;
+  .card-text {
+    h4 {
+      font-size: 2rem;
+    }
+    i,
+    p {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -151,12 +152,14 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .card-text h4 {
-    font-size: 2.5rem;
-  }
+  .card-text {
+    h4 {
+      font-size: 2.5rem;
+    }
 
-  .card-text i,
-  .card-text p {
-    font-size: 1.5rem;
+    i,
+    p {
+      font-size: 1.5rem;
+    }
   }
 }

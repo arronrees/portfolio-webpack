@@ -5,18 +5,18 @@ body {
   color: white;
   width: 100vw;
   height: 100vh;
-}
 
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
 
-body::-webkit-scrollbar-track {
-  background: rgb(18, 20, 22);
-}
+  &::-webkit-scrollbar-track {
+    background: rgb(18, 20, 22);
+  }
 
-body::-webkit-scrollbar-thumb {
-  background: #fff;
+  &::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
 }
 
 .wrapper {
@@ -40,15 +40,6 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 
-.page-hero {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 4rem;
-  font-weight: 200;
-  text-align: center;
-  padding-top: 2rem;
-}
-
-// Nav
 .nav-bar {
   position: relative;
 }
@@ -68,6 +59,14 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   text-align: center;
+}
+
+.page-hero {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 @media only screen and (min-width: 900px) {
@@ -128,21 +127,22 @@ body::-webkit-scrollbar-thumb {
     width: 10rem;
     height: 4rem;
     overflow: hidden;
-  }
-  .nav-item:nth-child(1) {
-    transform: rotate(-90deg);
-    top: 4rem;
-    left: 0;
-  }
-  .nav-item:nth-child(2) {
-    top: 4rem;
-    right: 0;
-    transform: rotate(90deg);
-  }
-  .nav-item:nth-child(3) {
-    bottom: 4rem;
-    right: 0;
-    transform: rotate(90deg);
+
+    &:nth-child(1) {
+      transform: rotate(-90deg);
+      top: 4rem;
+      left: 0;
+    }
+    &:nth-child(2) {
+      top: 4rem;
+      right: 0;
+      transform: rotate(90deg);
+    }
+    &:nth-child(3) {
+      bottom: 4rem;
+      right: 0;
+      transform: rotate(90deg);
+    }
   }
 
   // Sliding Border
