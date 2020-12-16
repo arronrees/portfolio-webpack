@@ -83,7 +83,7 @@ export function projectSlider() {
     }
 
     function isTweening() {
-      return gsap.isTweening('.project');
+      return gsap.isTweening('.card');
     }
 
     document.querySelector('div.next').addEventListener('click', (e) => {
