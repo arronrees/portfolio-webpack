@@ -8,25 +8,29 @@ module.exports = {
     main: './src/js/index.js',
     home: './src/js/pages/home.js',
     work: './src/js/pages/work.js',
+    about: './src/js/pages/about.js',
+    contact: './src/js/pages/contact.js',
   },
   plugins: [
     new HtmlWebpackSkipAssetsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/templates/indexTemplate.html',
-      excludeAssets: [/work.*.js/],
+      excludeAssets: [/work.*.js/, /about.*.js/, /contact.*.js/],
     }),
     new HtmlWebpackPlugin({
       filename: 'work.html',
       template: './src/templates/workTemplate.html',
-      excludeAssets: [/home.*.js/],
+      excludeAssets: [/home.*.js/, /about.*.js/, /contact.*.js/],
     }),
     new HtmlWebpackPlugin({
       filename: 'about.html',
       template: './src/templates/aboutTemplate.html',
+      excludeAssets: [/home.*.js/, /work.*.js/, /contact.*.js/],
     }),
     new HtmlWebpackPlugin({
       filename: 'contact.html',
       template: './src/templates/contactTemplate.html',
+      excludeAssets: [/home.*.js/, /work.*.js/, /about.*.js/],
     }),
   ],
   module: {
