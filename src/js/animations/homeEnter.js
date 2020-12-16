@@ -21,7 +21,7 @@ export function homeEnter(container) {
     0.1
   )
     .to(container, { opacity: 1 })
-    .from(face, { duration: 1, opacity: 0 })
+    .from(face, { duration: 1, opacity: 0 }, '-=1')
     .to(box, { duration: 3, rotateX: 450, rotateY: 450 }, '-=1.5')
     .to(face, { duration: 1.5, height: 290, width: 290 }, '-=1.5')
     .from(hero, { y: -25, opacity: 0 }, '-=1')

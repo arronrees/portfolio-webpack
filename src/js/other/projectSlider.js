@@ -70,7 +70,6 @@ export function projectSlider() {
     function transition(direction, toIndex) {
       const tlTransition = gsap.timeline({
         onStart: () => {
-          console.log({ fromIndex: currentStep }, { toIndex });
           updateCurrentStep(toIndex);
         },
       });

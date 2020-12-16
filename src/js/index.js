@@ -1,6 +1,5 @@
 import barba from '@barba/core';
 import barbaPrefetch from '@barba/prefetch';
-import barbaRouter from '@barba/router';
 
 import '../styles/reset.scss';
 import '../styles/style.scss';
@@ -17,16 +16,6 @@ import { animateCursor } from './other/cursor';
 import { cubeRotate } from './other/cubeRotate';
 import { openCard } from './other/openCard';
 import { projectSlider } from './other/projectSlider';
-
-const myRouter = [
-  { name: 'home', path: './index.html' },
-  { name: 'architecture', path: './architecture.html' },
-  { name: 'detail', path: './detail-page.html' },
-];
-
-barba.use(barbaRouter, {
-  routes: myRouter,
-});
 
 barba.use(barbaPrefetch);
 

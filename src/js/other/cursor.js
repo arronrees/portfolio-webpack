@@ -1,5 +1,5 @@
-export function animateCursor() {
-  const mouse = document.querySelector('.cursor');
+export function animateCursor(container) {
+  const mouse = container.querySelector('.cursor');
 
   let mouseX = 0;
   let mouseY = 0;
