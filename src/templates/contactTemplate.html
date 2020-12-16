@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <title>Arron Rees | Front End Developer</title>
+  <script src="https://kit.fontawesome.com/83ba9deb1d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,6 +35,40 @@
           </ul>
         </nav>
       </header>
+
+      <main>
+
+        <div class="contact">
+          <div class="page-hero">
+            <h1 class="lg-cursor">Contact</h1>
+          </div>
+
+          <section class="contact-desc">
+
+            <p>
+              You can get in touch via email at
+              <a href="mailto:arronlrees@gmail.com"><span class="sm-cursor">arronlrees@gmail.com</span></a>,
+              <br>
+              or try out the form below. <i class="far fa-hand-point-down"></i>
+            </p>
+
+
+            <div class="contact-form">
+              <form name="contact" method="POST" netlify>
+                <label for="name">Name</label>
+                <input class="input-name" type="text" name="name" id="name" required>
+                <label for="email">Email</label>
+                <input class="input-email" type="email" name="email" id="email" required>
+                <label for="message">Message</label>
+                <textarea required name="message" id="message" cols="30" rows="10"></textarea>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+
+          </section>
+        </div>
+
+      </main>
 
     </div>
 
