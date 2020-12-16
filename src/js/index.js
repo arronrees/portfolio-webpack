@@ -19,6 +19,10 @@ import { projectSlider } from './other/projectSlider';
 
 barba.use(barbaPrefetch);
 
+barba.hooks.beforeEnter(() => {
+  window.scrollTo(0, 0);
+});
+
 barba.init({
   transitions: [
     {
