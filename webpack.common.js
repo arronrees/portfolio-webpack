@@ -5,11 +5,11 @@ const HtmlWebpackSkipAssetsPlugin = require('html-webpack-skip-assets-plugin')
 
 module.exports = {
   entry: {
-    main: './src/js/index.js',
-    home: './src/js/pages/home.js',
-    work: './src/js/pages/work.js',
-    about: './src/js/pages/about.js',
-    contact: './src/js/pages/contact.js',
+    app: './src/js/index.js',
+    // home: './src/js/pages/home.js',
+    // work: './src/js/pages/work.js',
+    // about: './src/js/pages/about.js',
+    // contact: './src/js/pages/contact.js',
   },
   plugins: [
     new HtmlWebpackSkipAssetsPlugin(),
