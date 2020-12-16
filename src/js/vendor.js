@@ -1,1 +1,1 @@
-console.log('Vendor');
+console.log('Vendor file');

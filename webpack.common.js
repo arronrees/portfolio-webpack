@@ -1,19 +1,34 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackSkipAssetsPlugin = require('html-webpack-skip-assets-plugin')
+  .HtmlWebpackSkipAssetsPlugin;
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+    vendor: './src/js/vendor.js',
+  },
   plugins: [
+    new HtmlWebpackSkipAssetsPlugin(),
     new HtmlWebpackPlugin({
       template: './src/templates/indexTemplate.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'work.html',
+      template: './src/templates/workTemplate.html',
+      excludeAssets: [/main.*.js/],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: './src/templates/aboutTemplate.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'contact.html',
+      template: './src/templates/contactTemplate.html',
     }),
   ],
   module: {
     rules: [
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,

@@ -21,7 +21,7 @@ export function homeEnter(container) {
     pageCards,
     { x: '-101%' },
     { x: '100%', duration: 0.5, stagger: 0.1 },
-    0.2
+    0.1
   )
     .to(container, { opacity: 1 })
     .from(face, { duration: 1, opacity: 0 })
